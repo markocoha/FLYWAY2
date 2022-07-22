@@ -1,0 +1,40 @@
+{
+  "version": "2.0",
+  "name": "Flyway2",
+  "id": "4cc7943b-ae82-47f6-8e31-ed9da7515347",
+  "databaseType": "SqlServer",
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "url": "jdbc:sqlserver://mconitor.swedencentral.cloudapp.azure.com;encrypt=true;databaseName=DMDatabase_test;trustServerCertificate=true",
+          "username": "coha",
+          "password": {
+            "name": "Flyway Desktop 822b2623-662a-4c49-bf0e-75adc9b1ba82",
+            "secretType": "DefaultSecretStore"
+          },
+          "type": "UsernamePassword"
+        },
+        "schemas": []
+      },
+      {
+        "connectionProvider": {
+          "url": "jdbc:sqlserver://mconitor.swedencentral.cloudapp.azure.com;databaseName=DMDatabase_test2;encrypt=true;trustServerCertificate=true",
+          "username": "coha",
+          "password": {
+            "name": "Flyway Desktop 0dc6a433-cab6-4710-a0a5-ac45f9a7c3f6",
+            "secretType": "DefaultSecretStore"
+          },
+          "type": "UsernamePassword"
+        },
+        "schemas": []
+      }
+    ]
+  }
+}
